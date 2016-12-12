@@ -1,0 +1,11 @@
+#!/bin/bash
+set -eu
+
+CWD=$PWD
+pushd /usr/local/
+for tool in $@
+do
+    echo "installing $tool"
+    $CWD/$tool
+done
+popd

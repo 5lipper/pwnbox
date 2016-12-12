@@ -1,0 +1,41 @@
+#!/bin/sh
+mkdir -p ~/.vim/bundle/
+git clone --depth=1 https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+cat >> ~/.vimrc <<EOF
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'gnattishness/cscope_maps'
+Plugin 'majutsushi/tagbar'
+Plugin 'scrooloose/nerdtree'
+Bundle 'tomasr/molokai'
+
+call vundle#end()
+filetype plugin indent on
+
+syntax on
+filetype indent on
+set nu
+set ruler
+set textwidth=75
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set backspace=indent,eol,start
+set mouse=a
+set hlsearch
+set encoding=utf-8
+set fileencoding=utf-8
+nmap <2-LeftMouse> <C-]>
+vmap <Enter> "+y
+EOF
+
+vim +PluginInstall +qall
+
+echo 'colorscheme molokai' >> ~/.vimrc

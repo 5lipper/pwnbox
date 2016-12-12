@@ -1,0 +1,20 @@
+#!/bin/bash
+set -e -o pipefail
+
+apt-get install -y libglib2.0-dev
+curl -L https://github.com/unicorn-engine/unicorn/archive/master.tar.gz | tar xvz
+
+pushd unicorn-master
+
+export UNICORN_QEMU_FLAGS="--python=$(which python)"
+export UNICORN_ARCHS="arm aarch64 x86 mips"
+./make.sh && ./make.sh install
+
+pushd bindings/python
+#pip install -U .
+make install
+popd
+
+make clean
+
+popd
