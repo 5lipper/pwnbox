@@ -13,6 +13,6 @@ COPY .git .git
 RUN git checkout .
 RUN ./install pip oh-my-zsh vundle ipython peda pwntools rp++ unicorn
 
-ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8'
+ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8' TERM='xterm-256color'
 WORKDIR /root/
 ENTRYPOINT ["/bin/zsh"]
