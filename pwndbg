@@ -1,0 +1,5 @@
+#!/bin/bash
+set -eu -o pipefail
+
+git clone --depth 1 https://github.com/pwndbg/pwndbg
+cd pwndbg && ./setup.sh
