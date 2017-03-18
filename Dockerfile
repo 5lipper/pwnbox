@@ -11,7 +11,7 @@ RUN apt-get install -y vim tmux zsh python-pip qemu gdb man ltrace strace
 WORKDIR /root/tools/
 COPY .git .git
 RUN git checkout .
-RUN ./install pip oh-my-zsh vundle ipython pwntools pwndbg rp++
+RUN ./install pip oh-my-zsh vundle ipython pwntools pwndbg xrop
 
 ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8' TERM='xterm-256color'
 WORKDIR /root/

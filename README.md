@@ -17,7 +17,7 @@ docker build -t pwnbox .
 +   ipython
 +   peda
 +   pwntools
-+   rp++
++   xrop
 +   unicorn
 
 

@@ -1,0 +1,7 @@
+#!/bin/bash -e
+
+git clone --depth=1 https://github.com/acama/xrop.git
+pushd xrop
+git submodule update --init --recursive
+make && make install
+popd
