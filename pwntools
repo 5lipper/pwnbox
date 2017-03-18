@@ -1,4 +1,4 @@
 #!/bin/bash -e
 
-apt-get install -y libssl-dev
+apt-get install -y libssl-dev libffi-dev
 pip install pwntools
