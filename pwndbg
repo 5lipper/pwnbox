@@ -2,4 +2,5 @@
 set -eu -o pipefail
 
 git clone --depth 1 https://github.com/pwndbg/pwndbg
+apt-get install sudo
 cd pwndbg && ./setup.sh
