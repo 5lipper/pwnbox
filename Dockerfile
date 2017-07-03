@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:16.04
 MAINTAINER slipper "slipper@0ops.net"
 
 RUN sed -i 's/archive.ubuntu.com/mirrors.163.com/' /etc/apt/sources.list
