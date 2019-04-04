@@ -7,7 +7,8 @@ RUN dpkg --add-architecture i386
 RUN apt-get update && apt-get install -y build-essential libtool g++ gcc \
     texinfo curl wget automake autoconf python python-dev git subversion \
     unzip libc6-dbg libc6-dbg:i386
-RUN apt-get install -y vim tmux zsh python-pip qemu gdb man ltrace strace
+RUN apt-get install -y vim tmux zsh python-pip qemu gdb man ltrace strace \
+    elfutils setools
 
 WORKDIR /root/tools/
 COPY .git .git
